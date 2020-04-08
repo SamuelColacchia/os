@@ -49,7 +49,7 @@ func CloudInit(cfg *config.CloudConfig) (*config.CloudConfig, error) {
 		return cfg, nil
 	}
 	if onlyConfigDrive(cfg.Rancher.CloudInit.Datasources) {
-		configDev := util.ResolveDevice("LABEL=config-2")
+		configDev := util.ResolveDevice("LABEL=cidata")
 		if configDev == "" {
 			// Check v9fs: https://www.kernel.org/doc/Documentation/filesystems/9p.txt
 			matches, _ := filepath.Glob("/sys/bus/virtio/drivers/9pnet_virtio/virtio*/mount_tag")

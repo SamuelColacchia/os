@@ -30,7 +30,7 @@ import (
 )
 
 const (
-	configDevName       = "config-2"
+	configDevName       = "cidata"
 	configDev           = "LABEL=" + configDevName
 	configDevMountPoint = "/media/config-2"
 	openstackAPIVersion = "latest"
